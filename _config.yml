@@ -1,0 +1,25 @@
+gems:
+  - jekyll-redirect-from
+markdown: kramdown
+collections:
+  book:
+    output: true
+  qs:
+    output: true
+  tutorial_base:
+    output: true
+  services:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
+
+      
+      
+      
+      
+      
