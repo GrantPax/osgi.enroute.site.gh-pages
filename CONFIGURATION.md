@@ -1,6 +1,9 @@
 # Configuration 
-To use this repo in another GitHub account, there are two changes and a check:
+To use this repo in the osgi GitHub account, there are two changes and a check:
 
-- change `baseurl` in  `_config.yml` to the project name in the account
+- change the baseurl in `_config.yml` to the project name
+
+	`baseurl: "/osgi.enroute.site"`
+	
 - add the CNAME file to the root directory
 - make sure the Disqus config is correct on the forum page
