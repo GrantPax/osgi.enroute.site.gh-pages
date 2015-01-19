@@ -12,7 +12,7 @@ This information will help us review and fix your issue faster.
 
 ## Building
 
-Run jekyll (2.0.3+) in the root directory to build:
+Stick with ruby 2.1.4 or there abouts. We've had jekyll trouble with 2.2.0. From there, the Gemfile will read the GitHub requirements. Run jekyll (2.0.3+) in the root directory to build:
 
 	$ bundle exec jekyll build  
 
