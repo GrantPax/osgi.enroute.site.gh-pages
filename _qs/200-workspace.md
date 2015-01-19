@@ -21,11 +21,11 @@ So start an Eclipse Luna session and select a workspace. For our tutorials in OS
 
 Select `File/Switch Workspace/Other ...`. This gives you the following dialog:
 
-![Switch Workspace](/img/qs/qs-switch-0.png)
+![Switch Workspace]({{ site.baseurl }}/img/qs/qs-switch-0.png)
 
 After filling in the proper path and then closing the dialog by clicking `OK`, we get an Eclipse restart and should finally get:
 
-![Start Screen](/img/qs/qs-switch-1.png)
+![Start Screen]({{ site.baseurl }}/img/qs/qs-switch-1.png)
 
 ### Import the Archetype Workspace
 
@@ -33,19 +33,19 @@ We can ignore the welcome screen. The next step is to link this Eclipse workspac
 
 Select `File/Import`. 
 
-![Import archetype](/img/qs/git-import-0.png)
+![Import archetype]({{ site.baseurl }}/img/qs/git-import-0.png)
 
 Then select the `Projects from Git`. 
 
-![Import archetype](/img/qs/git-import-1.png)
+![Import archetype]({{ site.baseurl }}/img/qs/git-import-1.png)
 
 If you click `Next` you should be see the following:
 
-![Import archetype](/img/qs/git-import-2.png)
+![Import archetype]({{ site.baseurl }}/img/qs/git-import-2.png)
 
 Select `Clone URI`, then `Next`, which gives us the window where we should enter the URI to the repository. 
 
-![Import archetype](/img/qs/git-import-3.png)
+![Import archetype]({{ site.baseurl }}/img/qs/git-import-3.png)
 
 You should then enter the URI; the URI that we should use is
 
@@ -53,26 +53,26 @@ You should then enter the URI; the URI that we should use is
 
 Select `Next` and then select the `master` branch.
 
-![Import archetype](/img/qs/git-import-4.png)
+![Import archetype]({{ site.baseurl }}/img/qs/git-import-4.png)
 
 Then select `Next` to go to the page where we will tell EGit to store our Git/bnd workspace in your file system.
 
-![Import archetype](/img/qs/git-import-5.png)
+![Import archetype]({{ site.baseurl }}/img/qs/git-import-5.png)
 
 By default Git places the projects in a sub directory `git` of your home directory (`~/git/...`). (This is an Eclipse preference.) We will follow this rather sane convention. However, the default name of the workspace is 'workspace' so we want to rename this to `com.acme.prime`.
 
 So click `Next`, which will bring us to a page asking us if we should import the projects in this workspace. A resounding yes! (Even if there is only a single `cnf` project.)
 
-![Import archetype](/img/qs/git-import-6.png)
+![Import archetype]({{ site.baseurl }}/img/qs/git-import-6.png)
 
 When you click `Next` you get on a bit deja vu page but there is probably some reason we don't get.
 
-![Import archetype](/img/qs/git-import-7.png)
+![Import archetype]({{ site.baseurl }}/img/qs/git-import-7.png)
 
 
 So just click `Finish`. Which should give you a fresh new workspace, only beaten by the smell of freshly baked bread!
 
-![Import archetype](/img/qs/git-import-8.png)
+![Import archetype]({{ site.baseurl }}/img/qs/git-import-8.png)
 
 We've now created a workspace that will allow us to play with enRoute. Maybe a bit cumbersome with all the EGit steps but once you've mastered it is quite fast since most pages are just clicking `Next` to accept the defaults.
 
@@ -81,11 +81,11 @@ You have to restart Eclipse since there is a small chance that Eclipse will by d
 
 Now, select the `Bndtools` perspective with `Window/Open Perspective .../Other ...'. This opens a selection dialog:
 
-![Perspective Selection Dialog](/img/qs/workspace-bndtools-0.png)
+![Perspective Selection Dialog]({{ site.baseurl }}/img/qs/workspace-bndtools-0.png)
 
 Selecting `Bndtools` and clicking `OK` ensures that you are in the proper perspective. Your Eclipse should look similar to (at least after you refresh the repository view at the left bottom):
 
-![Perspective Selection Dialog](/img/qs/workspace-bndtools-1.png)
+![Perspective Selection Dialog]({{ site.baseurl }}/img/qs/workspace-bndtools-1.png)
 
 
 ### File System
