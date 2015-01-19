@@ -1,7 +1,7 @@
 ---
 title: Testing in OSGi
 layout: tutorial
-prev: 500-testing.html
+prev: 500-dependencies.html
 next: 700-deploy.html
 summary: Executing JUnit tests in a running OSGi framework
 ---
@@ -19,7 +19,7 @@ If you're running the framework from the previous tutorial section then it is no
 
 An OSGi JUnit test is a new project. So create a `com.acme.prime.eval.test` project, be sure to  use the OSGi enRoute templates. Since this project name ends with `.test` we automatically get a proper test setup.
 
-![Test Project](/img/tutorial_base/test-test-0.png)
+![Test Project]({{ site.baseurl }}/img/tutorial_base/test-test-0.png)
 
 A tad confusing is the fact that in an OSGi Test project you will work in the `src` directory and *not* the `test` directory because we create a test bundle; if we used the `test` source directory would never end up with any classes in the bundle. Classes in the `test` directory are never added to the JAR file.
 
@@ -66,13 +66,13 @@ Hit the `Resolve` button and safe. We have only a few dependencies, all caused b
 
 Our bundles now look as follows:
 
-![Test Project](/img/tutorial_base/test-test-1.png)
+![Test Project]({{ site.baseurl }}/img/tutorial_base/test-test-1.png)
 
 To run the test, we must select the `com.acme.prime.eval.test` project, its `src` folder, a package in this folder, a class in this package, a method in the a class, or the bnd.bnd file. We can then do `@/Debug As/Bnd OSGi Test Launcher (JUnit)' or you can use the keyboard shortcut (Shift+Alt+X C). This executes the test which are then reported in the standard JUnit view. Remember the pilots and retractable gears, want to bet you confuse the entries `JUnit Test` and `Bnd OSGi Test Launcher (JUnit)`. Or even worse now, you often will accidentally select `Bnd OSGi Run Launcher`. If you do the latter, you get an error that the bundles cannot be resolved because JUnit is missing.
 
 And then ... the green bar!
 
-![Test Project](/img/tutorial_base/test-test-2.png)
+![Test Project]({{ site.baseurl }}/img/tutorial_base/test-test-2.png)
 
 
 

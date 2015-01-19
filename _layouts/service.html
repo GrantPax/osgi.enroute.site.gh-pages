@@ -38,8 +38,8 @@
 			</div>
 			
 		<li span=9>
-			<a class=nav-prev href="{{prev}}" {% unless prev %}disabled{%endunless%}>Prev</a>
-			<a class=nav-next href="{{next}}" {% unless next %}disabled{%endunless%}>Next</a>
+			<a class=nav-prev href="{{ site.baseurl }}{{prev}}" {% unless prev %}disabled{%endunless%}>Prev</a>
+			<a class=nav-next href="{{ site.baseurl }}{{next}}" {% unless next %}disabled{%endunless%}>Next</a>
 			<br/>
 			<hr/>
 			 
@@ -48,8 +48,8 @@
 				{{content}}
 			</div>
 			<hr/>
-			<a class=nav-prev href="{{prev}}" {% unless prev %}disabled{%endunless%}>Prev</a>
-			<a class=nav-next href="{{next}}" {% unless next %}disabled{%endunless%}>Next</a> 
+			<a class=nav-prev href="{{ site.baseurl }}{{prev}}" {% unless prev %}disabled{%endunless%}>Prev</a>
+			<a class=nav-next href="{{ site.baseurl }}{{next}}" {% unless next %}disabled{%endunless%}>Next</a> 
 	</ul>
 
 	{% include footer.htm %}

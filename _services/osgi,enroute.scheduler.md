@@ -5,7 +5,7 @@ version: 1.0
 summary: A time scheduler with Promise support for one time events and and TimeAjusters for periodic events.
 ---
 
-![Tracker Overview](/img/services/osgi.enroute.scheduler.overview.png)
+![Tracker Overview]({{ site.baseurl }}/img/services/osgi.enroute.scheduler.overview.png)
 
 ## Application Areas
 

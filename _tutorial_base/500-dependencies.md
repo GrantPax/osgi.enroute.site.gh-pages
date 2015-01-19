@@ -15,31 +15,31 @@ There is a lot of code that we're proud of but the `EvalImpl` class is not reall
 
 However, that raises the question how to get this external dependency in in our build? Well, we should first search in our local repositories. At the left bottom of your Eclipse window there are is a list of repositories:
 
-![Repositories](/img/tutorial_base/dependencies-repo-0.png)
+![Repositories]({{ site.baseurl }}/img/tutorial_base/dependencies-repo-0.png)
 
 Now there is a simple parser on Maven central that is quite nice for our purpose: [PARSII][1] and has an MIT License. Would it not be nice if we could easily add this to our build path? So why not search for `PARSII` in the repositories view.
 
-![Repositories](/img/tutorial_base/dependencies-repo-1.png)
+![Repositories]({{ site.baseurl }}/img/tutorial_base/dependencies-repo-1.png)
 
 This comes up empty, but we do get a link to 'Continue Search on jpm4j.org'. If we click this link, it opens a window on the [jpm4j.org](jpm4j.org) website.
 
-![Repositories](/img/tutorial_base/dependencies-repo-2.png)
+![Repositories]({{ site.baseurl }}/img/tutorial_base/dependencies-repo-2.png)
 
 Unfortunately the browser support in Linux Eclipse does not work well with jpm4j. You can go to the `Eclipse/Preferences/Bndtools/JPM. There you can select an external browser.
 {: .bug}
 
 This website provides has lots of interesting info and it contains more than Maven Central. Any JAR on there can be added to the build path of our project with a drag-and-drop operation. The drag always starts with the version vignette. The drop goes either to the `Central` repository or to the `Build` tab (where it is added to the build-path and the repository). Since we need to have the PARSII parser on our build path we first double click the `bnd.bnd` file, and the select the `Build` tab. We then drag the version vignette (the green 1.1.0 thingy) on the `Build Path` list. 
 
-![Repositories](/img/tutorial_base/dependencies-repo-3.png)
+![Repositories]({{ site.baseurl }}/img/tutorial_base/dependencies-repo-3.png)
 
 
 This will open a dialog: 
 
-![Repositories](/img/tutorial_base/dependencies-repo-4.png)
+![Repositories]({{ site.baseurl }}/img/tutorial_base/dependencies-repo-4.png)
 
 Since this is a JAR as we like them (no dependencies!) we only have to add one JAR to our build path. If there were dependencies, we would have gotten the change to add them as well. If we now refresh the `Repositories` view then we see that we've also added the PARSII library to our repository.
 
-![Repositories](/img/tutorial_base/dependencies-repo-5.png)
+![Repositories]({{ site.baseurl }}/img/tutorial_base/dependencies-repo-5.png)
 
 Since now have the PARSII library on our build path, we can use it in our `EvalImpl` class. This small library significantly simplifies our code:
 
@@ -65,11 +65,11 @@ In retrospect we could have expected this error since we created an external dep
 
 Back to the black art of packaging. Let's see how our bundle is shaping up: click on `bnd.bnd` and then select the `Contents` tab. It is clear that this bundle cannot resolve because it imports the `parsii.eval` package; a package for which the runtime has no providing bundle.
 
-![Importing parsii](/img/tutorial_base/dependencies-pack-0.png)
+![Importing parsii]({{ site.baseurl }}/img/tutorial_base/dependencies-pack-0.png)
 
 The bundle therefore looks like:
 
-![Importing parsii](/img/tutorial_base/dependencies-pack-1.png)
+![Importing parsii]({{ site.baseurl }}/img/tutorial_base/dependencies-pack-1.png)
 
 We now have 2 options. We can add the PARSII bundle to the runtime or we can add the imported packages to our own bundle. What is best? In this case the answer is quite easy since the PARSII is actually not a bundle; it is only a simple JAR. You can verify this easily. Select the PARSII bundle in the respositories view under the Central repository (search for parsii). If you double click on the JAR it opens the JAR Viewer, and the manifest is shown. This rather meager manifest is not an OSGi manifest, ergo, this is not a bundle. So option 2, adding the packages to the JAR is the best solution.
 
@@ -77,7 +77,7 @@ Go back to the `Contents` tab of the provider bundle. If you now drag the `parsi
 
 Adding these packages by hand can become tedious. So select the `Source` tab of the `bnd.bnd` editor:
 
-![Importing parsii](/img/tutorial_base/dependencies-pack-2.png)
+![Importing parsii]({{ site.baseurl }}/img/tutorial_base/dependencies-pack-2.png)
 
 What you now see is the underlying `bnd.bnd` properties file; in bnd everything is a property! We can now replace the clause in the `Private-Package` header and use wildcards like `parsii.*`:
 
@@ -87,7 +87,7 @@ What you now see is the underlying `bnd.bnd` properties file; in bnd everything 
 
 If you now save the `bnd.bnd` file and select the `Contents` tab you see that the imports have disappeared. Our provider bundle now looks like:
 
-![Importing parsii](/img/tutorial_base/dependencies-pack-3.png)
+![Importing parsii]({{ site.baseurl }}/img/tutorial_base/dependencies-pack-3.png)
 
 Copying packages into your bundle from the class path often creates surprise, disgust and vomiting for the more traditional developers. For now you have to believe us that we do know why we break this taboo. it actually works quite well.
 

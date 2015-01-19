@@ -1,7 +1,7 @@
 ---
 title: Testing the Provider with (Standard) JUnit
 layout: tutorial
-prev: 300-provider.html
+prev: 320-provider.html
 next: 400-run.html
 summary: Test the Provider project with a standard (non-OSGi) JUnit test
 ---
@@ -31,11 +31,11 @@ So let's evaluate a simple expression:
 
 Now, when I learned flying in a retractable gear plane my teacher told me that there are two kind of retractable gear pilots. The first category is the pilots that have landed the plane with gear up and the second category is for the pilots that have not yet landed their planes with gear up. Something like this is going to happen to you when testing in bndtools. In this case you must use the standard Eclipse JUnit test after selecting the test class or method: `@/Run As/JUnit Test`. Undoubtedly, there will be many times when you select the `Bnd OSGi Test Launcher (JUnit)` which we will discuss later. So select the `EvalImplTest` class and do `@/Run As/JUnit Test`.
 
-![JUnit](/img/tutorial_base/junit-0.png)
+![JUnit]({{ site.baseurl }}/img/tutorial_base/junit-0.png)
 
 Obviously, this test beats the implementation in its simplicity! Nice exercise for the reader (you always hate those as well?) 
 
-![JUnit](/img/tutorial_base/junit-1.png)
+![JUnit]({{ site.baseurl }}/img/tutorial_base/junit-1.png)
 
 To run JUnit tests you can select the project, the `test` folder, a package, a class, or a method and call up the context menu and then `@/Debug As/JUnit Test`. It will then run all tests selected beneath that level.
 

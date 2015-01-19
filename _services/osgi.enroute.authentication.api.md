@@ -5,7 +5,7 @@ version: 1.0
 summary: Providing an authenticated id based on variable user credentials.
 ---
 
-![Authenticator Service Collaboration Overview](/img/services/osgi.enroute.authentication.overview.png)
+![Authenticator Service Collaboration Overview]({{ site.baseurl }}/img/services/osgi.enroute.authentication.overview.png)
 
 ## Introduction
 

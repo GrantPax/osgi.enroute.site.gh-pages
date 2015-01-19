@@ -18,7 +18,7 @@ In the previous section we created an API for an expression evaluator. We now ne
 
 So let's create a new project with this name. `New/Bndtools OSGi Project`. Enter the new (`com.acme.prime.eval.provider`), select the OSGi enRoute templates, and follow the defaults.
 
-![Provider Project](/img/tutorial_base/provider-create-0.png)
+![Provider Project]({{ site.baseurl }}/img/tutorial_base/provider-create-0.png)
 
 ## Implementation
 
@@ -33,11 +33,11 @@ Unfortunately, this causes an error; Eclipse cannot find the `Eval` class becaus
 
 The dependencies of bnd are defined in the `bnd.bnd` file. We can control the build path through the build path editor. Double click on the `bnd.bnd` file and select the `Build` tab.
 
-![Build Tab](/img/tutorial_base/provider-create-1.png)
+![Build Tab]({{ site.baseurl }}/img/tutorial_base/provider-create-1.png)
 
 This tab does not only show you the bnd errors, it also shows you the current build path (OSGi enRoute API, JUnit, etc). To add the API project, click on the green plus ('+') just above the list. This pops up a list of all the *repositories*. As you can see, the top repository is the workspace and contains our API project. 
 
-![Adding to the Build Path](/img/tutorial_base/provider-create-2.png)
+![Adding to the Build Path]({{ site.baseurl }}/img/tutorial_base/provider-create-2.png)
 
 You can type text in the search box to filter the list. Double click the `com.acme.prime.eval.provider.api` project and click in `Finish`. Save the `bnd.bnd` file because otherwise there is no effect.
 
@@ -79,21 +79,21 @@ It is about time now to take a look at how our module (bundle) really looks like
 * Exported packages – Packages that we provide to other bundles and which we are supposed to maintain over time.
 * Imported packages – Packages we expect someone else to export, hoping that they are as good as we will be in maintaining that package over time.
 
-![Contents](/img/tutorial_base/provider-imports-0.png)
+![Contents]({{ site.baseurl }}/img/tutorial_base/provider-imports-0.png)
 
 If we translate this to a picture with the standard OSGi notation it looks as follows:
 
-![Bundle Layout](/img/tutorial_base/provider-imports-1.png)
+![Bundle Layout]({{ site.baseurl }}/img/tutorial_base/provider-imports-1.png)
 
 We can see that our simple bundle is importing the `com.acme.prime.eval.api` package to get the `Eval` interface. This is quite unpleasant for our users since they are forced to always download two bundles. Since the service API package and our simple implementation are tightly coupled (virtually any change will force a change in our provider) we can simplify the life of our customers by exporting the API from our provider bundle. This an be done by dragging the imported package in the right 'Import Packages' list to the Exported Package list and dropping it there.  If there is already an export of the `com.acme.prime.eval.provider.api` then you should remove it, it is a placeholder.
 
 After you save the `bnd.bnd` file, you'll see that the imports disappear.
 
-![Exporting the  API](/img/tutorial_base/provider-imports-2.png)
+![Exporting the  API]({{ site.baseurl }}/img/tutorial_base/provider-imports-2.png)
 
 Exporting the API should only be done by the providers of the service API, never by the consumers. Anyway, our bundle now looks different:
 
-![Exporting the  API](/img/tutorial_base/provider-imports-3.png)
+![Exporting the  API]({{ site.baseurl }}/img/tutorial_base/provider-imports-3.png)
 
 ## How Does it Work?
 

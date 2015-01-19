@@ -9,7 +9,7 @@ This OSGi Alliance initiative is about removing the barriers to adoption. It is 
 
 The following picture shows this idea. Where OSGi/Java provides an arguably better development environment for large application development, it is hard to deny that it is a lot easier to get started with popular non-type safe languages like for example node.js or Ruby on Rails. It is the mission of OSGi enRoute to lower this threshold.
 
-![Lowering the barriers](/img/book/why-enroute.png)
+![Lowering the barriers]({{ site.baseurl }}/img/book/why-enroute.png)
 
 To lower the barriers OSGi enRoute provides:
 

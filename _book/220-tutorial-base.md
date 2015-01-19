@@ -15,7 +15,7 @@ If you have any questions about this tutorial, please discuss them in the [forum
 <div>
 <ol>
 
-{% for t in site.tutorial_base %}<li><a href="{{t.url}}">{{t.title}}</a> – {{t.summary}}</li>
+{% for t in site.tutorial_base %}<li><a href="{{ site.baseurl }}{{t.url}}">{{t.title}}</a> – {{t.summary}}</li>
 {% endfor %}
 
 </ol>

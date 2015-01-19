@@ -5,7 +5,7 @@ version: 1.0
 summary: A simple publish and subscribe mechanism for generic events 
 ---
 
-![Event Admin Collaboration Diagram](/img/services/org.osgi.service.event.overview.png)
+![Event Admin Collaboration Diagram]({{ site.baseurl }}/img/services/org.osgi.service.event.overview.png)
 
 Nearly all the bundles in an OSGi framework must deal with events, either as an event publisher or as an event handler. So far, the preferred mechanism to disperse those events have been the service interface mechanism.
 

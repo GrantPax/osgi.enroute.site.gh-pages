@@ -39,15 +39,15 @@ So fire up Eclipse and select `/Ws/com.acme.prime` as the Eclipse workspace. You
 
 We are going to use the OSGi enRoute archetype workspace, which is a [Github repository][workspace]. We need to import this archetype so select `File/Import`. 
 
-![Import archetype](/img/tutorial_base/workspace-import-0.png)
+![Import archetype]({{ site.baseurl }}/img/tutorial_base/workspace-import-0.png)
 
 Then select the `Projects from Git`. 
 
-![Select Projects from Git](/img/tutorial_base/workspace-import-1.png)
+![Select Projects from Git]({{ site.baseurl }}/img/tutorial_base/workspace-import-1.png)
 
 And `Clone URI`. 
 
-![Select Clone URI](/img/tutorial_base/workspace-import-2.png)
+![Select Clone URI]({{ site.baseurl }}/img/tutorial_base/workspace-import-2.png)
 
 You should then enter the URI; the URI that we should use is
 
@@ -55,23 +55,23 @@ You should then enter the URI; the URI that we should use is
 
 So fill in the base URL, which should then give you:
 
-![Fill in the base URL](/img/tutorial_base/workspace-import-3.png)
+![Fill in the base URL]({{ site.baseurl }}/img/tutorial_base/workspace-import-3.png)
 
 On the next `Next` you must select the branch. The default is `master` and that is what we want.
 
-![Select Clone URI](/img/tutorial_base/workspace-import-4.png)
+![Select Clone URI]({{ site.baseurl }}/img/tutorial_base/workspace-import-4.png)
 
 If you then click `Next` you should see the page that allows you to specify the destination of your Git (and bnd) workspace. By default Git places the projects in a sub directory `git` of your home directory (`~/git/...`). (This is an Eclipse preference.) We will follow this rather sane convention since this separation makes a lot more sense than you probably think. So we follow the default but we rename the workspace directory from 'workspace' to a name that matches our Eclipse workspace: `com.acme.prime`.
 
-![Select Clone URI](/img/tutorial_base/workspace-import-5.png)
+![Select Clone URI]({{ site.baseurl }}/img/tutorial_base/workspace-import-5.png)
 
 On the `Next` page we must define how to import the projects. A bnd workspace contains potentially many projects so the default option is ok, `Import existing projects`.
 
-![Import Projects](/img/tutorial_base/workspace-import-6.png)
+![Import Projects]({{ site.baseurl }}/img/tutorial_base/workspace-import-6.png)
 
 You now see the projects that will be imported from this new workspace., so you can click `Next`. The mini Package Explorer shows a single project `cnf`. 
 
-![Import cnf and Finish](/img/tutorial_base/workspace-import-7.png)
+![Import cnf and Finish]({{ site.baseurl }}/img/tutorial_base/workspace-import-7.png)
 
 Since this is all what we want imported, we can cick `Finish` then this project will be imported.
  
@@ -99,11 +99,11 @@ The bnd and Git workspace have the following layout:
 
 Fortunately, from Eclipse it looks very simple:
 
-![Import cnf and Finish](/img/tutorial_base/workspace-final-0.png)
+![Import cnf and Finish]({{ site.baseurl }}/img/tutorial_base/workspace-final-0.png)
 
 You now have to restart Eclipse to make sure bndtools picks up the proper location. After you have restarted Eclipse, make sure you select the _bndtools perspective_. On the top right corner of the Eclipse workspace window you find a workspace icon with a '+', this is a button that pops up a list of perspectives. You can also do `Window/Open Perspective/Other ...`. Select `Bndtools`.
 
-![Import cnf and Finish](/img/tutorial_base/workspace-perspective-0.png)
+![Import cnf and Finish]({{ site.baseurl }}/img/tutorial_base/workspace-perspective-0.png)
 
 ## How Does it Work?
 
