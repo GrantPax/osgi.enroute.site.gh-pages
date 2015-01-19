@@ -14,17 +14,13 @@ This information will help us review and fix your issue faster.
 
 Run jekyll (2.0.3+) in the root directory to build:
 
-	$ bundle exec jekyll build -s _source 
+	$ bundle exec jekyll build  
 
 You can also run a server to test the site:
 
-	$ bundle exec jekyll server -w -s _source -d _site
+	$ bundle exec jekyll serve
 
 Then go to [http://localhost:4000](http://localhost:4000). The pages are automatically updated when you edit a markdown file, though you do have to refresh the browser to see these changes. Eclipse later revisions have a decent markdown editor build in.
-
-We use [Travis CI](https://travis-ci.org/osgi/osgi.enroute.site) and the repo includes a
-`.travis.yml` file to build on Travis CI. After successfully building, the Travis CI
-build will publish the built site on the web.
 
 ## Workflow
 
@@ -61,10 +57,6 @@ unless you are already using Git 2.0 where it is the default.
 
 Finally, the third side of the triangle is pull requests from your fork repo to the
 main repo.
-
-Make sure to set up [Travis CI](https://travis-ci.org) for your fork repo to test your commits
-when they are pushed to your fork repo. Travis CI will also build any [pull requests you 
-submit](https://travis-ci.org/osgi/osgi.enroute.site/pull_requests).
 
 ## Contribution guidelines
 

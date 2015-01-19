@@ -12,7 +12,7 @@ This repository holds the OSGi enRoute website hosted at [http://enroute.osgi.or
 
 You can clone this repository and then run jekyll (2.0.3+) in the root directory:
 
-	$ bundle exec jekyll server -w -s _source -d _site
+	$ bundle exec jekyll serve
 
 Then go to [http://localhost:4000](http://localhost:4000). The pages are automatically updated when you edit a markdown file, though you do have to refresh the browser to see these changes. Eclipse later revisions have a decent markdown editor build in.
 
