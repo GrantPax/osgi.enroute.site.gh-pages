@@ -55,15 +55,15 @@ Just like the test project, we need to add a dependency on the API project. As u
 
 We will define the run time requirements in a special file, a `bndrun` file. Such a file is already placed in the application project: `com.acme.prime.eval.bndrun`. Such a `bndrun` file is basically the information we have been working with in the `bnd.bnd` `Run` tab. If you double click on it, then it should look like:
 
-![Application bndrun](/img/tutorial_base/deploy-bndrun-0.png)
+![Application bndrun]({{ site.baseurl }}/img/tutorial_base/deploy-bndrun-0.png)
 
 As you can see, the initial requirement for our Gogo command is already there. Before we try it out, let's add a shell (`org.apache.felix.gogo.shell`) so it is slightly more interactive. That's it! Hit the `Resolve` button and save the `bndrun` file. 
 
-![Application bndrun](/img/tutorial_base/deploy-bndrun-1.png)
+![Application bndrun]({{ site.baseurl }}/img/tutorial_base/deploy-bndrun-1.png)
 
 At the right top of the `bndrun`'s `Run` tab there are a number of buttons:
 
-![Application bndrun](/img/tutorial_base/deploy-bndrun-2.png)
+![Application bndrun]({{ site.baseurl }}/img/tutorial_base/deploy-bndrun-2.png)
 
 If you click the `Debug OSGi` button then bnd will launch a framework and run your application.
 
@@ -82,11 +82,11 @@ The application project also includes a `debug.bndrun` file. This is also a `bnd
 
 The first thing you'll notice is how the console is filled with red text. This is the trace output of the launcher. If things do not really work as you expected (never happens to us ...) then this output, which traces the installation process in fine detail, can help you solve the problems. This behavior is triggered by the -runtrace flag. Click on the `bnd.bnd` `Source` tab, and change it to false or remove it if you do not want this trace.
 
-![Application bndrun](/img/tutorial_base/deploy-debug-0.png)
+![Application bndrun]({{ site.baseurl }}/img/tutorial_base/deploy-debug-0.png)
 
 The `debug.bndrun` file inherits from the `com.acme.prime.eval.bndrun` file, any initial requirement we add to this file is automatically added to the debug run; first principle of Don't Repeat Yourself (DRY). However, the `debug.bndrun` adds a set of standard requirements that make it so much easier to debug OSGi applications. It adds Web Console, the Gogo shell, etc. So click on the `Debug OSGi` button and then go to [http://localhost:8080/system/console/xray](http://localhost:8080/system/console/xray) to inspect your OSGi system. The user id and password were `admin`, and ... drumroll ... `admin`.
 
-![Application bndrun](/img/tutorial_base/deploy-debug-1.png)
+![Application bndrun]({{ site.baseurl }}/img/tutorial_base/deploy-debug-1.png)
 
 XRay and its associated tools were explained in the [debug section](450-debug.html).
  
@@ -96,15 +96,15 @@ This was fun, ok, at least not bad. But how do we deploy this? How do we get thi
 
 We start by double clicking the `com.acme.prime.eval.bndrun` file and selecting the `Run` tab. Remember where we found the `Debug OSGi` button, on the right top of the `bndrun` `Run` tab. A little bit more to the right you find an `Export` button. 
 
-![Application bndrun](/img/tutorial_base/deploy-bndrun-2.png)
+![Application bndrun]({{ site.baseurl }}/img/tutorial_base/deploy-bndrun-2.png)
 
 Clicking the `Export` button shows you a dialog that asks you where to store the exeecutable JAR on the file system:
 
-![Application bndrun](/img/tutorial_base/deploy-export-1.png)
+![Application bndrun]({{ site.baseurl }}/img/tutorial_base/deploy-export-1.png)
 
 Select the `Executable JAR`, and save this on your desktop under the name `com.acme.prime.jar`. 
 
-![Application bndrun](/img/tutorial_base/deploy-export-2.png)
+![Application bndrun]({{ site.baseurl }}/img/tutorial_base/deploy-export-2.png)
 
 This JAR is quite wondrous: it has no external dependencies. To execute it, you should open a shell on your desktop:
 

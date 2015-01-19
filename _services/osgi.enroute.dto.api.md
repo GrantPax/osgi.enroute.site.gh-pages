@@ -5,4 +5,4 @@ version: 1.0
 summary:  Support for converting objects to other objects or JSON.
 ---
 
-![DTO Class Overview](/img/services/osgi.enroute.dto.overview.png)
+![DTO Class Overview]({{ site.baseurl }}/img/services/osgi.enroute.dto.overview.png)

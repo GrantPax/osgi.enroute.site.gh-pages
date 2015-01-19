@@ -19,7 +19,7 @@ If you have any questions about this quick-start, please discuss them in the [fo
 <div>
 <ol>
 
-{% for qs in site.qs %}<li><a href="{{qs.url}}">{{qs.title}}</a> – {{qs.summary}}</li>
+{% for qs in site.qs %}<li><a href="{{ site.baseurl }}{{qs.url}}">{{qs.title}}</a> – {{qs.summary}}</li>
 {% endfor %}
 
 </ol>

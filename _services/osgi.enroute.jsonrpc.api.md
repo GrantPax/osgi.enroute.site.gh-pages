@@ -5,4 +5,4 @@ version: 1.0
 summary:  A white-board approach to JSON RPC 
 ---
 
-![JSON RPC Service Collaboration Overview](/img/services/osgi.enroute.jsonrpc.overview.png)
+![JSON RPC Service Collaboration Overview]({{ site.baseurl }}/img/services/osgi.enroute.jsonrpc.overview.png)

@@ -5,7 +5,7 @@ version: 1.1
 summary:  A standard to describe data structures with the intent to create user interfaces from.
 ---
 
-![Metatype Collaboration Diagram](/img/services/org.osgi.service.metatype.overview.png)
+![Metatype Collaboration Diagram]({{ site.baseurl }}/img/services/org.osgi.service.metatype.overview.png)
 
 The Metatype specification defines interfaces that allow bundle developers to describe attribute types in a computer readable form using so-called metadata.
 

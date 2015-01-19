@@ -15,15 +15,15 @@ While your OSGi framework is happily humming along and you're making changes the
 
 For example, put a breakpoint on the `EvalImpl.eval` method. When you enter the Gogo `test:eval` command, you will see that the IDE enters your breakpoint. Before you go to the debugger, however, Eclipse might annoy with the following dialog:
 
-![Debugging](/img/tutorial_base/debug-debug-0.png)
+![Debugging]({{ site.baseurl }}/img/tutorial_base/debug-debug-0.png)
 
 This dialog can be skipped, in general you really want to go to the debugger when you hit a breakpoint. Now you get the following setup:
 
-![Debugging](/img/tutorial_base/debug-debug-1.png)
+![Debugging]({{ site.baseurl }}/img/tutorial_base/debug-debug-1.png)
 
 As is normal in Java debuggers you can change the code and save it. In these situations you often get a warning that the IDE could not change the code and it requires a restart. 
 
-![Class patching dialog](/img/tutorial_base/debug-debug-2.png)
+![Class patching dialog]({{ site.baseurl }}/img/tutorial_base/debug-debug-2.png)
 
 Duh, that is only in stuffy classic environments! In an OSGi environment we do not really rely on the complex class patching hacks that Eclipse or JRebel attempt to do. A change means a new bundle that gets deployed to the running server. So even if the IDE is clever enough to patch the class, it would get quickly overridden with our new bundle. So just click on the checkbox to ignore this warning in the future.  
 
@@ -39,7 +39,7 @@ However, there is a bug in Jetty, so for now you have to also add `org.apache.fe
 {: class=bug }
 
 
-![Run Window for adding XRay](/img/tutorial_base/debug-xray-0.png)
+![Run Window for adding XRay]({{ site.baseurl }}/img/tutorial_base/debug-xray-0.png)
 
 Then hit `Resolve`. This will add a web server, Apache Felix Web Console, and XRay. Save the file, and then go to  [http://localhost:8080/system/console/xray](http://localhost:8080/system/console/xray). The default user id password is, surprisingly imaginative: `admin` and `admin` (thanks Felix guys, I won't forget it!). The Apache Felix Web Console is an amazing tool, so let's learn to use it!
 
@@ -51,7 +51,7 @@ If you accidentally did something wrong, then kill the running process (red butt
 
 XRay might not scale that well to large systems but for a lot of beginners it is an eye opener because it visualizes the dynamics of an OSGi framework. 
 
-![XRay](/img/tutorial_base/debug-xray-1.png)
+![XRay]({{ site.baseurl }}/img/tutorial_base/debug-xray-1.png)
 
 The actual canvas on which Xray is drawn is much bigger than shown here, you can scroll the window to the left.
 
@@ -63,7 +63,7 @@ Services are crucial interaction elements and they can occur many times in diagr
 * Straight Side – Connections to the straight side indicate service clients. Clients call the methods of the service.
 * Angled Side – The angled side is reserved for service listeners.
 
-![XRay](/img/tutorial_base/debug-service-0.png)
+![XRay]({{ site.baseurl }}/img/tutorial_base/debug-service-0.png)
 
 You can see the triangle as an arrow; the direction is the dependency/call/use direction. Services are color coded. 
 
@@ -77,7 +77,7 @@ If you hover over a service then the connection lines to other services are remo
 
 Almost all elements provide a tooltip when you hover over it and are clickable. If you click on a service, we navigate to the `Services` tab. Since each service can represent many service objects of the same type, you will have to find the appropriate service yourself.
 
-![XRay](/img/tutorial_base/debug-service-1.png)
+![XRay]({{ site.baseurl }}/img/tutorial_base/debug-service-1.png)
 
 The triangle on the left of the service gives you the details if you click on it. Notice how we can see that this service has registered the properties for the Gogo shell (scope and function) that we added in [the provider section](320-provider.html).
 
@@ -86,7 +86,7 @@ The triangle on the left of the service gives you the details if you click on it
 If we go back to XRay then we see that a bundle has a (hopefully) green LEDs; each of these LEDs represent a 
 _component_. If it is green then it is happy, if it is red it misses either a dependency or its configuration. If you click on the LED, the `com.acme.prime.eval.provider` bundle, then you go to the `component tab` for this component. This tab will be your best friend! It gives you all the goodies about the component.
 
-![XRay](/img/tutorial_base/debug-component-0.png)
+![XRay]({{ site.baseurl }}/img/tutorial_base/debug-component-0.png)
 
 Most important is of course if its references are satisfied, and if so, by whom. In general, if a component is `active` or `registered` then it is happy. 
 
@@ -96,11 +96,11 @@ A tip. There is one puzzling use case. Sometimes a component is not satisfied bu
 
 The `Configuration` tab provides access to Configuration Admin. This is one of the most interesting tabs because it provides a very decent interface to your configuration data. It turns out that with the Meta Type Service it is possible to provide sufficient information to create an editor. 
 
-![XRay](/img/tutorial_base/debug-config-0.png)
+![XRay]({{ site.baseurl }}/img/tutorial_base/debug-config-0.png)
 
 If you click on an entry then such an editor opens:
 
-![XRay](/img/tutorial_base/debug-config-1.png)
+![XRay]({{ site.baseurl }}/img/tutorial_base/debug-config-1.png)
 
 ### Bundles
 
@@ -114,11 +114,11 @@ You can for example stop the Apache Felix Metatype bundle. First look at the reg
 
 To stop the Apache Felix Metatype bundle, click on its box and then in the Bundle details tab click on the stop button (the standard player stop, a black square).
 
-![XRay](/img/tutorial_base/debug-bundle-0.png)
+![XRay]({{ site.baseurl }}/img/tutorial_base/debug-bundle-0.png)
 
 If you now go back to XRay, you'll see that the metatype bundle turned grey and it no longer has any registered services. 
 
-![XRay](/img/tutorial_base/debug-bundle-1.png)
+![XRay]({{ site.baseurl }}/img/tutorial_base/debug-bundle-1.png)
 
 If a plugin shows a warning sign then this means that there was an error in the log for this bundle. XRay tracks the logs and if it finds that a bundle has generated a log error or warning in the last 2 minutes then it marks the bundle with the warning sign. If you hover over it you can see the log message.
 

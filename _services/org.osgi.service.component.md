@@ -5,7 +5,7 @@ version: 1.3
 summary: An extender for Declarative Services components 
 ---
 
-![Declarative Services Collaboration Diagram](/img/services/org.osgi.service.component.overview.png)
+![Declarative Services Collaboration Diagram]({{ site.baseurl }}/img/services/org.osgi.service.component.overview.png)
 
 ## When to Use?
 

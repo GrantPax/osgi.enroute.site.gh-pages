@@ -5,7 +5,7 @@ version: 1.0
 summary: Provides time based functions like delays, (cron and period based) schedules, and timeouts on Promises. 
 ---
 
-![Scheduler Service](/img/services/osgi.enroute.scheduler.overview.png)
+![Scheduler Service]({{ site.baseurl }}/img/services/osgi.enroute.scheduler.overview.png)
 
 ## Problem
 

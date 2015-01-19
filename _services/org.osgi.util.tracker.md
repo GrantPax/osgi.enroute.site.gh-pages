@@ -5,4 +5,4 @@ version: 1.0
 summary:  Utilities to reliably track services and bundles 
 ---
 
-![Tracker Overview](/img/services/org.osgi.util.tracker.overview.png)
+![Tracker Overview]({{ site.baseurl }}/img/services/org.osgi.util.tracker.overview.png)

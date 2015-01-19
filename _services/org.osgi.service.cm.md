@@ -5,7 +5,7 @@ version: 1.5
 summary: Provides a push and pull model to configure components. 
 ---
 
-![Configuration Admin Collaboration Diagram](/img/services/org.osgi.service.cm.overview.png)
+![Configuration Admin Collaboration Diagram]({{ site.baseurl }}/img/services/org.osgi.service.cm.overview.png)
 
 ## When to Use?
 

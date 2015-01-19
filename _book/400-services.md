@@ -8,7 +8,7 @@ This is the OSGi enRoute Base Profile service catalog. The following services ar
 <div>
 <ol>
 
-{% for service in site.services %}<li><a href="{{service.url}}">{{service.title}}</a> – {{service.summary}}</li>
+{% for service in site.services %}<li><a href="{{ site.baseurl }}{{service.url}}">{{service.title}}</a> – {{service.summary}}</li>
 {% endfor %}
 
 </ol>
