@@ -8,7 +8,9 @@ To use this repo in the osgi GitHub account, there are two changes and a check:
 - add the CNAME file to the root directory
 - make sure the Disqus config is correct on the forum page
 
-Lastly, I was using GitHub's desktop git tool for the work and it doesn't have a signature setting. I'll sign anything that needs signing if you'll just tell me how. If this helps or suffices, it applies to the entire repository:
+I used Ruby 2.1.4 for the work. Version 2.2.0 gave me jekyll trouble. [GitHub calls for v2.1.1](https://pages.github.com/versions/) but `rvm` doesn't list it as an option for me.
+
+Lastly, I was using GitHub's desktop git tool for the work and it doesn't have a signature setting. I simply forgot to do all the signing for each commit. I'll sign anything that needs to be signed if you'll just tell me how. If this helps or suffices, it applies to the entire repository:
 
 ```
 Developer Certificate of Origin
